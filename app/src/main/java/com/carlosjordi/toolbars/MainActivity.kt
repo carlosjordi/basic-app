@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import com.carlosjordi.toolbars.databinding.ActivityMainBinding
+import com.carlosjordi.toolbars.toolbar_1.ITEM_LIST
 import com.carlosjordi.toolbars.toolbar_1.ItemAdapter
 
 class MainActivity : AppCompatActivity() {
@@ -16,5 +17,7 @@ class MainActivity : AppCompatActivity() {
         val adapter = ItemAdapter()
 
         binding.itemsList.adapter = adapter
+        // se le indica la lista de items al adapter
+        adapter.submitList(ITEM_LIST)
     }
 }
