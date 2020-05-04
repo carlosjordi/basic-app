@@ -28,11 +28,13 @@
 
         <TextView
             android:id="@+id/description"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_normal"
+            android:layout_marginEnd="@dimen/spacing_normal"
             android:text="@{item.description}"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/title"
             app:layout_constraintTop_toBottomOf="@id/title"
             tools:text="Description" />
@@ -43,10 +45,10 @@
             android:layout_marginTop="@dimen/spacing_normal"
             android:layout_marginEnd="@dimen/spacing_normal"
             android:scaleType="centerCrop"
-            android:src="@{item.imgResource}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/description"
             app:layout_constraintTop_toBottomOf="@id/description"
+            app:setImgResource="@{item.imgResource}"
             tools:src="@drawable/_item_1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

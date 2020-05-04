@@ -1,5 +1,7 @@
 package com.carlosjordi.toolbars.toolbar_1
 
+import android.widget.ImageView
+import androidx.databinding.BindingAdapter
 import com.carlosjordi.toolbars.R
 
 val ITEM_LIST = listOf(
@@ -22,3 +24,9 @@ val ITEM_LIST = listOf(
         R.drawable._item_3
     )
 )
+
+// esto nos ayudará a setear la imagen en el layout
+@BindingAdapter("setImgResource")
+fun ImageView.setImgResource(imgResource: Int) {
+    this.setImageResource(imgResource)
+}
