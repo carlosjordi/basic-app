@@ -18,5 +18,9 @@
         android:id="@+id/itemDetailFragment"
         android:name="com.carlosjordi.toolbars.ui.itemdetail.ItemDetailFragment"
         android:label="fragment_item_detail"
-        tools:layout="@layout/fragment_item_detail" />
+        tools:layout="@layout/fragment_item_detail" >
+        <argument
+            android:name="item"
+            app:argType="com.carlosjordi.toolbars.toolbar_1.Item" />
+    </fragment>
 </navigation>
