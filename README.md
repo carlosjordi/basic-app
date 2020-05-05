@@ -2,15 +2,16 @@
 
 En este proyecto se tratarán temas básicos de Android con Kotlin.
 
-## Toolbars:
+## Contenido:
 
 * [Toolbar](#toolbar)
 * [Collapsing Toolbar](#collapsing-toolbar)
+* [Navegación](#navegacion)
 
 
 ### Toolbar
 
-Para revisar esta implementación se ha de revisar la rama Toolbar
+Chekear la rama Toolbar para revisar esta implementación
 
 ```
 git checkout Toolbar
@@ -20,10 +21,18 @@ git checkout Toolbar
 
 ### Collapsing Toolbar
 
-Para revisar esta implementación se ha de revisar la rama Collapsing-Toolbar
+Chekear la rama Collapsing-Toolbar para revisar esta implementación
 
 ```
 git checkout Collapsing-Toolbar
 ```
 
 ![Collapsing Toolbar](images/collapsing_toolbar.gif)
+
+### Navegacion
+
+Chekear la rama Navegacion para revisar esta implementación
+
+```
+git checkout Navegacion
+```
