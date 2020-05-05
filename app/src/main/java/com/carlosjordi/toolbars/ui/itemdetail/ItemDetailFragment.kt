@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.carlosjordi.toolbars.R
+import com.carlosjordi.toolbars.databinding.FragmentItemDetailBinding
 
 /**
  * A simple [Fragment] subclass.
@@ -17,8 +18,11 @@ class ItemDetailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_item_detail, container, false)
+        val binding = FragmentItemDetailBinding.inflate(inflater, container, false)
+
+
+
+        return binding.root
     }
 
 }
