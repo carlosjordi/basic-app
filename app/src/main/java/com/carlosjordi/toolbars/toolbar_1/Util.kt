@@ -1,6 +1,7 @@
 package com.carlosjordi.toolbars.toolbar_1
 
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.carlosjordi.toolbars.R
 
@@ -29,4 +30,13 @@ val ITEM_LIST = listOf(
 @BindingAdapter("setImgResource")
 fun ImageView.setImgResource(imgResource: Int) {
     this.setImageResource(imgResource)
+}
+
+@BindingAdapter("app:showCode")
+fun TextView.setCode(item: Item) {
+    // pequeña lógica para generar código de producto
+    // basado en su ID + primera letra del producto +
+    // primera letra de la descripcion
+    val code = "${item.id}${item.title.substring(0, 1)}${item.description.substring(0, 1)}"
+    this.text = this.context.getString(R.string.product_code, code)
 }
