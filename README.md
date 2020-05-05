@@ -36,3 +36,5 @@ Chekear la rama Navegacion para revisar esta implementación
 ```
 git checkout Navegacion
 ```
+
+![Navegacion](images/navegacion.gif)
