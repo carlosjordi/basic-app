@@ -8,11 +8,16 @@
         <variable
             name="item"
             type="com.carlosjordi.toolbars.toolbar_1.Item" />
+
+        <variable
+            name="listener"
+            type="com.carlosjordi.toolbars.toolbar_1.ItemClickListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> listener.onClick(item)}">
 
         <TextView
             android:id="@+id/title"

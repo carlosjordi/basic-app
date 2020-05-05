@@ -20,7 +20,8 @@ class ItemDetailFragment : Fragment() {
     ): View? {
         val binding = FragmentItemDetailBinding.inflate(inflater, container, false)
 
-
+        val item = ItemDetailFragmentArgs.fromBundle(requireArguments()).item
+        binding.item = item
 
         return binding.root
     }

@@ -7,21 +7,23 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.carlosjordi.toolbars.databinding.ItemLayoutBinding
 
-class ItemAdapter : ListAdapter<Item, ItemAdapter.ItemViewHolder>(ItemDiffCallback()) {
+class ItemAdapter(val clickListener: ItemClickListener) :
+    ListAdapter<Item, ItemAdapter.ItemViewHolder>(ItemDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ItemViewHolder.from(parent)
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = getItem(position)
-        holder.bind(item)
+        holder.bind(item, clickListener)
     }
 
     class ItemViewHolder(private val binding: ItemLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: Item) {
+        fun bind(item: Item, clickListener: ItemClickListener) {
             // hace el binding entre el item que se nos pase como parametro y el item
             // que tenemos en el layout, el cual se encargará de 'pintar' los datos en pantalla
             binding.item = item
+            binding.listener = clickListener
             binding.executePendingBindings()
         }
 
@@ -40,4 +42,9 @@ class ItemAdapter : ListAdapter<Item, ItemAdapter.ItemViewHolder>(ItemDiffCallba
 class ItemDiffCallback : DiffUtil.ItemCallback<Item>() {
     override fun areItemsTheSame(oldItem: Item, newItem: Item) = oldItem.id == newItem.id
     override fun areContentsTheSame(oldItem: Item, newItem: Item) = oldItem == newItem
+}
+
+// clase que se encargará del evento de click en nuestros items
+class ItemClickListener(val clickListener: (item: Item) -> Unit) {
+    fun onClick(item: Item) = clickListener(item)
 }
