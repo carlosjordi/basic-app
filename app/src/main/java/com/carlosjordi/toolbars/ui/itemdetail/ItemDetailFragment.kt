@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.carlosjordi.toolbars.databinding.FragmentItemDetailBinding
 
@@ -17,6 +18,8 @@ class ItemDetailFragment : Fragment() {
 
         val item = ItemDetailFragmentArgs.fromBundle(requireArguments()).item
         binding.item = item
+
+        (activity as AppCompatActivity).supportActionBar?.title = item.title
 
         return binding.root
     }

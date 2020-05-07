@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/itemListFragment"
         android:name="com.carlosjordi.toolbars.ui.itemlist.ItemListFragment"
-        android:label="fragment_item_list"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_item_list" >
         <action
             android:id="@+id/action_itemListFragment_to_itemDetailFragment"
@@ -30,6 +30,6 @@
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.carlosjordi.toolbars.ui.about.AboutFragment"
-        android:label="fragment_about"
+        android:label="@string/fragment_about"
         tools:layout="@layout/fragment_about" />
 </navigation>

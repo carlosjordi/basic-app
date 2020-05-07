@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">Toolbars</string>
+    <string name="app_name">Basic App</string>
     <string name="favorite">favoritos</string>
     <string name="search">buscar</string>
     <string name="about">Sobre la app</string>
     <string name="product_code">Código del Producto: %s</string>
     <string name="about_text">Este proyecto tratará sobre conceptos básicos de Android usando Kotlin como lenguaje de programación y los componentes de Jetpack.</string>
     <string name="issue_text">Si gusta de hacer alguna recomendacion en cuanto a que les gustaría que se implemente sientanse libre de abrir un issue en https://github.com/carlosjordi/basic-app</string>
+    <string name="fragment_about">Sobre la App</string>
 </resources>

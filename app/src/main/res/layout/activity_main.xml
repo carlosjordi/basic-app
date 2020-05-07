@@ -10,28 +10,15 @@
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="128dp">
+            android:layout_height="wrap_content">
 
-            <com.google.android.material.appbar.CollapsingToolbarLayout
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
                 style="@style/Widget.MaterialComponents.Toolbar.Primary"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:collapsedTitleTextAppearance="@style/MyApp.TextAppearance.App.CollapsingToolbar.Collapsed"
-                app:expandedTitleMarginBottom="24dp"
-                app:expandedTitleMarginStart="72dp"
-                app:expandedTitleTextAppearance="@style/MyApp.TextAppearance.App.CollapsingToolbar.Expanded"
-                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
-                app:title="@string/app_name">
-
-                <com.google.android.material.appbar.MaterialToolbar
-                    android:id="@+id/toolbar"
-                    android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
-                    android:elevation="0dp"
-                    app:layout_collapseMode="pin"
-                    app:menu="@menu/menu_toolbar" />
-
-            </com.google.android.material.appbar.CollapsingToolbarLayout>
+                android:layout_height="?attr/actionBarSize"
+                app:menu="@menu/menu_toolbar"
+                app:title="@string/app_name" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
