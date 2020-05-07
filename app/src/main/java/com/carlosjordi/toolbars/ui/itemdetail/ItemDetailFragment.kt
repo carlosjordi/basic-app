@@ -1,17 +1,12 @@
 package com.carlosjordi.toolbars.ui.itemdetail
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
-import com.carlosjordi.toolbars.R
+import androidx.fragment.app.Fragment
 import com.carlosjordi.toolbars.databinding.FragmentItemDetailBinding
 
-/**
- * A simple [Fragment] subclass.
- */
 class ItemDetailFragment : Fragment() {
 
     override fun onCreateView(
@@ -25,5 +20,4 @@ class ItemDetailFragment : Fragment() {
 
         return binding.root
     }
-
 }

@@ -15,7 +15,7 @@
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/mi_more"
-        android:title="@string/more"
+        android:id="@+id/aboutFragment"
+        android:title="@string/about"
         app:showAsAction="never" />
 </menu>

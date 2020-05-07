@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.carlosjordi.toolbars.databinding.ItemLayoutBinding
 
-class ItemAdapter(val clickListener: ItemClickListener) :
+class ItemAdapter(private val clickListener: ItemClickListener) :
     ListAdapter<Item, ItemAdapter.ItemViewHolder>(ItemDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ItemViewHolder.from(parent)

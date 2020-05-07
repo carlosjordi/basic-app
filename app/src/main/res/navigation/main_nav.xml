@@ -27,4 +27,9 @@
             android:name="item"
             app:argType="com.carlosjordi.toolbars.toolbar_1.Item" />
     </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.carlosjordi.toolbars.ui.about.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
 </navigation>
