@@ -21,4 +21,6 @@
     <style name="MyApp.TextAppearance.About" parent="TextAppearance.MaterialComponents.Body1">
         <item name="android:textSize">20sp</item>
     </style>
+
+    <style name="MyApp.AddItem.Input" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox" />
 </resources>

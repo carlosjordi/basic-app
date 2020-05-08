@@ -28,6 +28,12 @@ class ItemListFragment : Fragment() {
         binding.itemsList.adapter = adapter
         adapter.submitList(ITEM_LIST)
 
+        // navegando al fragmento donde agregaremos un item
+        binding.fabAdd.setOnClickListener {
+            findNavController()
+                .navigate(ItemListFragmentDirections.actionItemListFragmentToAddItemFragment())
+        }
+
         // indicamos que hay un menu
         setHasOptionsMenu(true)
 

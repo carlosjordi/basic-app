@@ -7,4 +7,7 @@
     <string name="about_text">Este proyecto tratará sobre conceptos básicos de Android usando Kotlin como lenguaje de programación y los componentes de Jetpack.</string>
     <string name="issue_text">Si gusta de hacer alguna recomendacion en cuanto a que les gustaría que se implemente sientanse libre de abrir un issue en https://github.com/carlosjordi/basic-app</string>
     <string name="fragment_about">Sobre la App</string>
+    <string name="hint_item_title">Item</string>
+    <string name="hint_item_description">Descripción</string>
+    <string name="add_button">Agregar</string>
 </resources>
