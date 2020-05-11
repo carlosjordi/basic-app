@@ -7,11 +7,11 @@
 
         <variable
             name="item"
-            type="com.carlosjordi.toolbars.toolbar_1.Item" />
+            type="com.carlosjordi.basicapp.entity.Item" />
 
         <variable
             name="listener"
-            type="com.carlosjordi.toolbars.toolbar_1.ItemClickListener" />
+            type="com.carlosjordi.basicapp.ui.itemlist.ItemClickListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

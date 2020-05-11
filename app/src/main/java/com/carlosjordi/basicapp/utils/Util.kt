@@ -1,10 +1,11 @@
-package com.carlosjordi.toolbars.toolbar_1
+package com.carlosjordi.basicapp.utils
 
 import android.graphics.Bitmap
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
-import com.carlosjordi.toolbars.R
+import com.carlosjordi.basicapp.R
+import com.carlosjordi.basicapp.entity.Item
 
 val ITEM_LIST = mutableListOf(
     Item(

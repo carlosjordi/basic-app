@@ -1,4 +1,4 @@
-package com.carlosjordi.toolbars.ui.about
+package com.carlosjordi.basicapp.ui.about
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-import com.carlosjordi.toolbars.R
+import com.carlosjordi.basicapp.R
 
 class AboutFragment : Fragment() {
 

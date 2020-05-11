@@ -1,4 +1,4 @@
-package com.carlosjordi.toolbars.ui.additem
+package com.carlosjordi.basicapp.ui.additem
 
 import android.app.Activity.RESULT_OK
 import android.content.Intent
@@ -14,21 +14,21 @@ import android.view.ViewGroup
 import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.carlosjordi.toolbars.databinding.FragmentAddItemBinding
-import com.carlosjordi.toolbars.toolbar_1.ITEM_LIST
-import com.carlosjordi.toolbars.toolbar_1.Item
+import com.carlosjordi.basicapp.databinding.FragmentAddItemBinding
+import com.carlosjordi.basicapp.utils.ITEM_LIST
+import com.carlosjordi.basicapp.entity.Item
 import java.io.File
 import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
 
 const val REQUEST_TAKE_PHOTO = 1
-const val AUTHORITY = "com.carlosjordi.toolbars"
+const val AUTHORITY = "com.carlosjordi.basicapp"
 
 class AddItemFragment : Fragment() {
 
     lateinit var binding: FragmentAddItemBinding
-    lateinit var currentPhotoPath: String
+    private lateinit var currentPhotoPath: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

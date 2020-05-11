@@ -1,4 +1,4 @@
-package com.carlosjordi.toolbars.ui.itemlist
+package com.carlosjordi.basicapp.ui.itemlist
 
 import android.os.Bundle
 import android.view.*
@@ -6,11 +6,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
-import com.carlosjordi.toolbars.R
-import com.carlosjordi.toolbars.databinding.FragmentItemListBinding
-import com.carlosjordi.toolbars.toolbar_1.ITEM_LIST
-import com.carlosjordi.toolbars.toolbar_1.ItemAdapter
-import com.carlosjordi.toolbars.toolbar_1.ItemClickListener
+import com.carlosjordi.basicapp.R
+import com.carlosjordi.basicapp.databinding.FragmentItemListBinding
+import com.carlosjordi.basicapp.utils.ITEM_LIST
 
 class ItemListFragment : Fragment() {
 
@@ -20,11 +18,13 @@ class ItemListFragment : Fragment() {
     ): View? {
         val binding = FragmentItemListBinding.inflate(inflater, container, false)
 
-        val adapter = ItemAdapter(ItemClickListener {
-            // se ejecuta cuando se hace click en cualquiera de los items
-            findNavController()
-                .navigate(ItemListFragmentDirections.actionItemListFragmentToItemDetailFragment(it))
-        })
+        val adapter =
+            ItemAdapter(ItemClickListener {
+                // se ejecuta cuando se hace click en cualquiera de los items
+                findNavController()
+                    .navigate(ItemListFragmentDirections
+                        .actionItemListFragmentToItemDetailFragment(it))
+            })
         binding.itemsList.adapter = adapter
         adapter.submitList(ITEM_LIST)
 

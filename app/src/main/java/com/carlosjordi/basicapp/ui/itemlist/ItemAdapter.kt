@@ -1,16 +1,22 @@
-package com.carlosjordi.toolbars.toolbar_1
+package com.carlosjordi.basicapp.ui.itemlist
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.carlosjordi.toolbars.databinding.ItemLayoutBinding
+import com.carlosjordi.basicapp.databinding.ItemLayoutBinding
+import com.carlosjordi.basicapp.entity.Item
 
 class ItemAdapter(private val clickListener: ItemClickListener) :
-    ListAdapter<Item, ItemAdapter.ItemViewHolder>(ItemDiffCallback()) {
+    ListAdapter<Item, ItemAdapter.ItemViewHolder>(
+        ItemDiffCallback()
+    ) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ItemViewHolder.from(parent)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
+        ItemViewHolder.from(
+            parent
+        )
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = getItem(position)
@@ -31,7 +37,9 @@ class ItemAdapter(private val clickListener: ItemClickListener) :
             fun from(parent: ViewGroup): ItemViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = ItemLayoutBinding.inflate(layoutInflater, parent, false)
-                return ItemViewHolder(binding)
+                return ItemViewHolder(
+                    binding
+                )
             }
         }
     }

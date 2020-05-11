@@ -1,4 +1,4 @@
-package com.carlosjordi.toolbars.toolbar_1
+package com.carlosjordi.basicapp.entity
 
 import android.graphics.Bitmap
 import android.os.Parcelable

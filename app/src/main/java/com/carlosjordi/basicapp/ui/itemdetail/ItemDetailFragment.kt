@@ -1,4 +1,4 @@
-package com.carlosjordi.toolbars.ui.itemdetail
+package com.carlosjordi.basicapp.ui.itemdetail
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.carlosjordi.toolbars.databinding.FragmentItemDetailBinding
+import com.carlosjordi.basicapp.databinding.FragmentItemDetailBinding
 
 class ItemDetailFragment : Fragment() {
 

@@ -1,4 +1,4 @@
-package com.carlosjordi.toolbars
+package com.carlosjordi.basicapp
 
 import org.junit.Test
 
