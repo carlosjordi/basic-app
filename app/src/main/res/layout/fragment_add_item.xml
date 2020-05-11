@@ -1,64 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingHorizontal="@dimen/spacing_normal"
-    tools:context=".ui.additem.AddItemFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/item_image"
-        android:layout_width="0dp"
-        android:layout_height="240dp"
-        android:layout_marginTop="@dimen/spacing_normal"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/spacing_normal"
+        tools:context=".ui.additem.AddItemFragment">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_title"
-        style="@style/MyApp.AddItem.Input"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing_normal"
-        android:hint="@string/hint_item_title"
-        app:layout_constraintEnd_toEndOf="@id/item_image"
-        app:layout_constraintStart_toStartOf="@id/item_image"
-        app:layout_constraintTop_toBottomOf="@id/item_image">
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="0dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder_item_add_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/title_input"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_title"
+            style="@style/MyApp.AddItem.Input"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="text" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:hint="@string/hint_item_title"
+            app:layout_constraintEnd_toEndOf="@id/item_image"
+            app:layout_constraintStart_toStartOf="@id/item_image"
+            app:layout_constraintTop_toBottomOf="@id/item_image">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_description"
-        style="@style/MyApp.AddItem.Input"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing_normal"
-        android:hint="@string/hint_item_description"
-        app:layout_constraintEnd_toEndOf="@id/til_title"
-        app:layout_constraintStart_toStartOf="@id/til_title"
-        app:layout_constraintTop_toBottomOf="@id/til_title">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/title_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/description_input"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_description"
+            style="@style/MyApp.AddItem.Input"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="textMultiLine" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:hint="@string/hint_item_description"
+            app:layout_constraintEnd_toEndOf="@id/til_title"
+            app:layout_constraintStart_toStartOf="@id/til_title"
+            app:layout_constraintTop_toBottomOf="@id/til_title">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/add_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/add_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/description_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

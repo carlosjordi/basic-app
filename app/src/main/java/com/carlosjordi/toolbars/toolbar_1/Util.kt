@@ -1,11 +1,12 @@
 package com.carlosjordi.toolbars.toolbar_1
 
+import android.graphics.Bitmap
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.carlosjordi.toolbars.R
 
-val ITEM_LIST = listOf(
+val ITEM_LIST = mutableListOf(
     Item(
         1L,
         "Mueble empotrado",
@@ -28,8 +29,12 @@ val ITEM_LIST = listOf(
 
 // esto nos ayudará a setear la imagen en el layout
 @BindingAdapter("setImgResource")
-fun ImageView.setImgResource(imgResource: Int) {
-    this.setImageResource(imgResource)
+fun ImageView.setImgResource(imgResource: Any) {
+    if (imgResource is Int) {
+        this.setImageResource(imgResource)
+    } else {
+        this.setImageBitmap(imgResource as Bitmap)
+    }
 }
 
 @BindingAdapter("app:showCode")

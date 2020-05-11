@@ -10,4 +10,5 @@
     <string name="hint_item_title">Item</string>
     <string name="hint_item_description">Descripción</string>
     <string name="add_button">Agregar</string>
+    <string name="fragment_add_item">Agregar Item</string>
 </resources>
