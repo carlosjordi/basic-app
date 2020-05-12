@@ -20,6 +20,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/error_message_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_light"
+            app:layout_constraintEnd_toEndOf="@id/item_image"
+            app:layout_constraintStart_toStartOf="@id/item_image"
+            app:layout_constraintTop_toBottomOf="@id/item_image"
+            tools:text="Error message" />
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_title"
             style="@style/MyApp.AddItem.Input"

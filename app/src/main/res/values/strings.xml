@@ -11,4 +11,7 @@
     <string name="hint_item_description">Descripción</string>
     <string name="add_button">Agregar</string>
     <string name="fragment_add_item">Agregar Item</string>
+    <string name="error_message_title">El titulo es obligatorio</string>
+    <string name="error_message_description">Debe agregar una descripción</string>
+    <string name="error_message_image">Debe tomar una foto</string>
 </resources>

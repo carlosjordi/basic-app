@@ -28,7 +28,7 @@ const val AUTHORITY = "com.carlosjordi.basicapp"
 class AddItemFragment : Fragment() {
 
     lateinit var binding: FragmentAddItemBinding
-    private lateinit var currentPhotoPath: String
+    private var currentPhotoPath: String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,11 +40,11 @@ class AddItemFragment : Fragment() {
         binding.itemImage.setOnClickListener { dispatchTakePictureIntent() }
 
         binding.addButton.setOnClickListener {
-            addItem()
-            galleryAddPic()
-            navigateToMainScreen()
+            if (addItem()) {
+                galleryAddPic()
+                navigateToMainScreen()
+            }
         }
-
         return binding.root
     }
 
@@ -124,13 +124,18 @@ class AddItemFragment : Fragment() {
         }
     }
 
-    private fun addItem() {
-        val id = ITEM_LIST[ITEM_LIST.size - 1].id + 1
-        val title = binding.titleInput.text.toString()
-        val description = binding.descriptionInput.text.toString()
-        val image = (binding.itemImage.drawable as BitmapDrawable).bitmap
-        val item = Item(id, title, description, null, image)
-        ITEM_LIST.add(item)
+    private fun addItem(): Boolean {
+        addValidations(binding)
+        if (isValidItem(binding) && isValidImage(binding, currentPhotoPath)) {
+            val id = ITEM_LIST[ITEM_LIST.size - 1].id + 1
+            val title = binding.titleInput.text.toString()
+            val description = binding.descriptionInput.text.toString()
+            val image = (binding.itemImage.drawable as BitmapDrawable).bitmap
+            val item = Item(id, title, description, null, image)
+            ITEM_LIST.add(item)
+            return true
+        }
+        return false
     }
 
     private fun navigateToMainScreen() {
