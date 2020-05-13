@@ -50,8 +50,8 @@ fun addValidations(binding: FragmentAddItemBinding) {
     )
 }
 
-fun isValidImage(binding: FragmentAddItemBinding, photoPath: String): Boolean {
-    if (photoPath.isBlank()) {
+fun isValidImage(binding: FragmentAddItemBinding, photoTaken: Boolean): Boolean {
+    if (!photoTaken) {
         binding.errorMessageImage.text =
             binding.errorMessageImage.context.resources.getString(R.string.error_message_image)
         return false

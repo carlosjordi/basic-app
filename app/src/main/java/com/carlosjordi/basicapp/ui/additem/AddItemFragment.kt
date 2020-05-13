@@ -29,6 +29,7 @@ class AddItemFragment : Fragment() {
 
     lateinit var binding: FragmentAddItemBinding
     private var currentPhotoPath: String = ""
+    private var photoTaken = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -74,6 +75,7 @@ class AddItemFragment : Fragment() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == REQUEST_TAKE_PHOTO && resultCode == RESULT_OK) {
             setPic()
+            photoTaken = true
         }
     }
 
@@ -126,7 +128,7 @@ class AddItemFragment : Fragment() {
 
     private fun addItem(): Boolean {
         addValidations(binding)
-        if (isValidItem(binding) && isValidImage(binding, currentPhotoPath)) {
+        if (isValidItem(binding) && isValidImage(binding, photoTaken)) {
             val id = ITEM_LIST[ITEM_LIST.size - 1].id + 1
             val title = binding.titleInput.text.toString()
             val description = binding.descriptionInput.text.toString()
