@@ -7,6 +7,7 @@ En este proyecto se tratarán temas básicos de Android con Kotlin.
 * [Toolbar](#toolbar)
 * [Collapsing Toolbar](#collapsing-toolbar)
 * [Navegación](#navegacion)
+* [Agregar Item](#agregar-item)
 
 
 ### Toolbar
@@ -38,3 +39,16 @@ git checkout Navegacion
 ```
 
 ![Navegacion](images/navegacion.gif)
+
+### Agregar Item
+
+Chequear la rama Add-Item para revisar esta implementación
+
+```
+git checkout Add-Item
+```
+
+En esta implementación se añade la funcionalidad de agregar items a nuestra lista. Debido a que aún 
+no se implementa una base de datos todos los items nuevos solo están incluídos de forma temporal.
+
+![Add Item](images/add_item.gif)
